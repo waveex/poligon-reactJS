@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/waveex/poligon-reactJS/static/css/main.f3b71e68.chunk.css",
+    "main.js": "/waveex/poligon-reactJS/static/js/main.c1b81adb.chunk.js",
+    "main.js.map": "/waveex/poligon-reactJS/static/js/main.c1b81adb.chunk.js.map",
+    "runtime-main.js": "/waveex/poligon-reactJS/static/js/runtime-main.aadd5b0e.js",
+    "runtime-main.js.map": "/waveex/poligon-reactJS/static/js/runtime-main.aadd5b0e.js.map",
+    "static/js/2.0d6b7f6d.chunk.js": "/waveex/poligon-reactJS/static/js/2.0d6b7f6d.chunk.js",
+    "static/js/2.0d6b7f6d.chunk.js.map": "/waveex/poligon-reactJS/static/js/2.0d6b7f6d.chunk.js.map",
+    "index.html": "/waveex/poligon-reactJS/index.html",
+    "precache-manifest.049978803496a950fb6b1444acf72deb.js": "/waveex/poligon-reactJS/precache-manifest.049978803496a950fb6b1444acf72deb.js",
+    "service-worker.js": "/waveex/poligon-reactJS/service-worker.js",
+    "static/css/main.f3b71e68.chunk.css.map": "/waveex/poligon-reactJS/static/css/main.f3b71e68.chunk.css.map",
+    "static/js/2.0d6b7f6d.chunk.js.LICENSE.txt": "/waveex/poligon-reactJS/static/js/2.0d6b7f6d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/waveex/poligon-reactJS/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aadd5b0e.js",
+    "static/js/2.0d6b7f6d.chunk.js",
+    "static/css/main.f3b71e68.chunk.css",
+    "static/js/main.c1b81adb.chunk.js"
+  ]
+}
