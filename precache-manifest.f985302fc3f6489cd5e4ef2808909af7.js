@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e1b40997fb8d598832c8f71932598a20",
+    "revision": "4d770e87c380ebc706e078508ed05ab5",
     "url": "/waveex/poligon-reactJS/index.html"
   },
   {
-    "revision": "ae7d0d019ad0081677d6",
+    "revision": "0d2f009d79eab659cbd8",
     "url": "/waveex/poligon-reactJS/static/css/main.f3b71e68.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/waveex/poligon-reactJS/static/js/2.0d6b7f6d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae7d0d019ad0081677d6",
-    "url": "/waveex/poligon-reactJS/static/js/main.c1b81adb.chunk.js"
+    "revision": "0d2f009d79eab659cbd8",
+    "url": "/waveex/poligon-reactJS/static/js/main.004776a2.chunk.js"
   },
   {
     "revision": "17f05e93afc045c554d6",

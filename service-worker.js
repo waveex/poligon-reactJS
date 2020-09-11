@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/waveex/poligon-reactJS/precache-manifest.049978803496a950fb6b1444acf72deb.js"
+  "/waveex/poligon-reactJS/precache-manifest.f985302fc3f6489cd5e4ef2808909af7.js"
 );
 
 self.addEventListener('message', (event) => {
