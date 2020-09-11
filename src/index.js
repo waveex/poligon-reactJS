@@ -46,7 +46,6 @@ class Board extends React.Component {
     return (
       <div>
         <h1 className="title">TIC TAC TOE</h1>
-
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -99,6 +98,18 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[history.length - 1];
     const winner = calculateWinner(current.squares);
+
+    const moves = history.map((step,  move) =>{
+      const desc = move ?
+      'przejdz do ruchu #' + move : 'przejdz do początku gry';
+      return (
+        <li>
+          <button onClick={() =>  this.jumpTo(move)}>{desc}</button>
+        </li>
+      );
+
+    });
+
     let status = " ";
     if (winner) {
       status = 'wygrywa ' + winner;
@@ -118,7 +129,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );
