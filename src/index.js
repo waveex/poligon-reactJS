@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -32,6 +34,9 @@ const kwadrat = new Prostokat(10, 300)
 console.log(kwadrat.pole);
 
 
+
+
+
 class Board extends React.Component {
   renderSquare(i) {
     return (
@@ -44,8 +49,7 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1 className="title">TIC TAC TOE</h1>
+      <div className="main">
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -95,7 +99,7 @@ class Game extends React.Component {
       xIsNext: !this.state.xIsNext,
     });
   }
-  jumpTo(step){
+  jumpTo(step) {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
@@ -107,12 +111,13 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const moves = history.map((step,  move) =>{
+    const moves = history.map((step, move) => {
       const desc = move ?
-      'przejdz do ruchu #' + move : 'przejdz do początku gry' ;
+        'przejdz do ruchu #' + move : 'Początek gry';
+
       return (
-        <li key={move}>
-          <button onClick={() =>  this.jumpTo(move)}>{desc}</button>
+        <li clasName="moves-button" key={move}>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
 
@@ -129,6 +134,7 @@ class Game extends React.Component {
 
     return (
       <div className="game">
+        <h1 className="game-title">TIC TAC TOE</h1>
         <div className="game-board">
           <Board
             squares={current.squares}
@@ -139,10 +145,99 @@ class Game extends React.Component {
           <div>{status}</div>
           <ol>{moves}</ol>
         </div>
+        <div className="counter">
+          <h2>Counter</h2>
+          <p>State - stores and mutate components</p><Counter /></div>
+        <div className="input"><Inputer /></div>
       </div>
     );
   }
 
+}
+
+class Inputer extends React.Component {
+  constructor() {
+    super();
+    this.state = { firstName: '', lastName: '', };
+  };
+  handleInputChange = (e) =>
+  this.setState
+    (
+      {
+        [
+          e.target.name
+        ]
+          :
+          [
+            e.target.value
+          ]
+      }
+    )
+
+    render()
+    {
+      return (
+        <div>
+
+
+
+  <label>Imie </label><br />
+          <input  value={this.state.firstName} name="firstName"onInput={this.handleInputChange}></input> <br />
+          <label>nazwsiko</label> <br />
+          <input value={this.state.lastName} name="lastName" onInput={this.handleInputChange}></input> <br/>
+          <output> Imię i nazwisko: {this.state.firstName} {this.state.lastName}</output>
+
+          </div>
+
+      )
+    }
+}
+
+
+class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = { counter: 0, sum: 0, doubleClick: 0 };
+
+
+  }
+  double() {
+    this.setState({
+      doubleClick: this.state.doubleClick + 1
+
+    })
+  }
+
+  increment() {
+    this.setState({
+      counter: this.state.counter + 1,
+      sum: this.state.sum + 1,
+      dbclicks: this.state.dbclicks + 1
+    })
+  }
+  decrement() {
+    this.setState({
+      counter: this.state.counter - 1,
+      sum: this.state.sum + 1,
+      dbclicks: this.state.dbclicks + 1
+    })
+
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.increment.bind(this)} >  + </button>
+        <output>{this.state.counter}</output>
+        <button onClick={this.decrement.bind(this)} >  - </button>
+        <h2> suma kliknięć</h2>
+        <output>{this.state.sum}</output>
+        <h2>Podwojne kliknięcia</h2>
+        <output>{this.state.doubleClick}</output>
+      </div>
+
+    );
+  }
 }
 
 
@@ -177,6 +272,7 @@ function Square(props) {
 
   );
 }
+
 
 // ========================================
 
